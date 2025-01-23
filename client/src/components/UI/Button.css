@@ -1,0 +1,22 @@
+.button {
+  padding: 1rem;
+  border-radius: 1rem;
+  transition: background-color 0.4s;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: rgb(87 83 78);
+}
+
+.button:disabled {
+  background-color: rgb(168 162 158);
+  cursor: not-allowed;
+}
+.primary {
+  color: #22292f;
+  background-color: rgb(56 189 248);
+}
+
+.primary:hover {
+  background-color: rgb(14 165 233);
+}

@@ -1,0 +1,28 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.submit-btn {
+  margin-top: 3rem;
+}
+
+button {
+  font-size: 1.6rem;
+  background-color: transparent;
+  color: white;
+  border: none;
+}
+
+.btn-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.error {
+  color: red;
+  font-size: 1.4rem;
+  margin-top: 0.5rem;
+}

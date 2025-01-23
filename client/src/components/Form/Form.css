@@ -1,0 +1,12 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(68 64 60);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.auth {
+  max-width: 35rem;
+  margin: 0 auto;
+}

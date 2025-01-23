@@ -1,0 +1,20 @@
+.header {
+  text-align: center;
+  color: azure;
+  padding: 5rem 0 3rem 0;
+}
+
+.header--h1 {
+  font-weight: 700;
+}
+
+button {
+  padding: 1rem;
+  background-color: transparent;
+  border-radius: 1rem;
+  transition: background-color 0.4s;
+  cursor: pointer;
+}
+button:hover {
+  background-color: rgb(68 64 60);
+}

@@ -17,7 +17,7 @@ export function createUser(email, password) {
   return token;
 }
 
-export function login(email, password) {
+export async function login(email, password) {
   const user = db.prepare('SELECT * FROM users WHERE email = ? ').get(email);
   if (!user || !bcrypt.compareSync(password, user.password)) {
     const error = new Error('Invalid email or password');

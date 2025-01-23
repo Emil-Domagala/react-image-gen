@@ -1,9 +1,16 @@
 import express from 'express';
-import { createUser, enforceAuth } from './auth.js';
 import { generateImage } from './image.js';
+import { login, createUser, enforceAuth } from './auth.js';
 
 const app = express();
 app.use(express.json());
+
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET,POST,DELETE,OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  next();
+});
 
 app.post('/signup', async (req, res) => {
   try {
@@ -21,7 +28,7 @@ app.post('/signup', async (req, res) => {
 app.post('/login', async (req, res) => {
   try {
     const { email, password } = req.body;
-    const token = login(email, password);
+    const token = await login(email, password);
     return res.status(200).send({ message: 'User loggedin', token });
   } catch (error) {
     if (error.status === 400) {
