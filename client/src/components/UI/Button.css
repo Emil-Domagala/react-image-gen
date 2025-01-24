@@ -8,10 +8,6 @@
   background-color: rgb(87 83 78);
 }
 
-.button:disabled {
-  background-color: rgb(168 162 158);
-  cursor: not-allowed;
-}
 .primary {
   color: #22292f;
   background-color: rgb(56 189 248);
@@ -19,4 +15,9 @@
 
 .primary:hover {
   background-color: rgb(14 165 233);
+}
+
+.button:disabled {
+  background-color: rgb(168 162 158);
+  cursor: not-allowed;
 }
